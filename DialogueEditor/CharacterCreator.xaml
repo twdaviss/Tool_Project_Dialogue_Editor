@@ -1,0 +1,32 @@
+﻿<Window x:Class="DialogueEditor.CharacterCreator"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DialogueEditor" d:DataContext="{d:DesignInstance Type=local:CharacterCreator}"
+        mc:Ignorable="d"
+        
+        Title="CharacterCreator" Height="137" Width="370">
+    <Grid>
+        <StackPanel>
+            
+            <StackPanel Margin="0,10,0,0" Orientation="Horizontal">
+                <Image Margin="0,0,5,0" Width="75" Height="75" Source="{Binding Path=SpritePath}"></Image>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Margin="0,0,0,5" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0">Name:</TextBlock>
+                        <TextBox Width="175" Name="NameBox"></TextBox>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,0,20" Orientation="Horizontal">
+                        <TextBlock Margin="0,0,5,0" Width="34.3">Sprite:</TextBlock>
+                        <TextBox Text="{Binding Path=SpritePath}" Name="SpriteBox" Margin="0,0,5,0" Width="175" VerticalAlignment="Center"></TextBox>
+                        <Button Height="18" Margin="0,0,0,0" VerticalAlignment="Center" Click="BrowseButton_Click">Browse</Button>
+                    </StackPanel>
+                    <Button Width="42" Margin="0,0,0,0" HorizontalAlignment="Right" Click="CreateButton_Click">Create</Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
